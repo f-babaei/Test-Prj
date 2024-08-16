@@ -391,9 +391,9 @@ for (ServiceCrew sc:serviceCrews)
 					<Height>600</Height>
 					<GISShapes>
 					</GISShapes>
-					<Latitude>52.6537889661331</Latitude>
-					<Longitude>-1.6861294420867299</Longitude>
-					<Scale>2000000</Scale>
+					<Latitude>52.44343463007545</Latitude>
+					<Longitude>-1.9716575275036936</Longitude>
+					<Scale>4000000</Scale>
 					<BorderColor>-4144960</BorderColor>
 					<FillColor>-1</FillColor>
 					<ShowTiles>true</ShowTiles>
