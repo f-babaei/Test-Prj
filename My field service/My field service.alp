@@ -145,6 +145,21 @@
 					</Properties>
 
 				</Variable>
+				<Variable Class="CollectionVariable">
+					<Id>1723816580639</Id>
+					<Name><![CDATA[maintenanceRequests]]></Name>
+					<X>120</X><Y>300</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+						<CollectionClass><![CDATA[LinkedList]]></CollectionClass>
+						<ElementClass><![CDATA[EquipmentUnit]]></ElementClass>
+						<ValueElementClass><![CDATA[String]]></ValueElementClass>
+					</Properties>
+
+				</Variable>
 			</Variables>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
@@ -161,8 +176,15 @@
 						<Name><![CDATA[unit]]></Name>
 						<Type><![CDATA[EquipmentUnit]]></Type>
 					</Parameter>
-					<Body><![CDATA[serviceRequests.addLast(unit);
+					<Body><![CDATA[if (maintenanceRequests.contains(unit))
+	maintenanceRequests.remove(unit);
+	
 for (ServiceCrew sc:serviceCrews)
+	if (sc.equipmentUnit == unit)
+		return;
+serviceRequests.addLast(unit);
+
+for (ServiceCrew sc:serviceCrews)	
 	send("CHECK REQUEST QUEUE",sc);]]></Body>
 				</Function>
 				<Function AccessType="default" StaticFunction="false">
@@ -170,24 +192,52 @@ for (ServiceCrew sc:serviceCrews)
 					<ReturnType><![CDATA[boolean]]></ReturnType>
 					<Id>1723728270543</Id>
 					<Name><![CDATA[thereAreRequests]]></Name>
-					<X>120</X><Y>160</Y>
+					<X>120</X><Y>140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[return !serviceRequests.isEmpty();]]></Body>
+					<Body><![CDATA[return !serviceRequests.isEmpty() || !maintenanceRequests.isEmpty();]]></Body>
 				</Function>
 				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
 					<ReturnType><![CDATA[EquipmentUnit]]></ReturnType>
 					<Id>1723728304375</Id>
 					<Name><![CDATA[getRequest]]></Name>
-					<X>120</X><Y>200</Y>
+					<X>120</X><Y>160</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[return serviceRequests.removeFirst();]]></Body>
+					<Body><![CDATA[if (!serviceRequests.isEmpty())
+	return serviceRequests.removeFirst();
+else
+	return maintenanceRequests.removeFirst();]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1723816989583</Id>
+					<Name><![CDATA[requestMaintenance]]></Name>
+					<X>120</X><Y>180</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[unit]]></Name>
+						<Type><![CDATA[EquipmentUnit]]></Type>
+					</Parameter>
+					<Body><![CDATA[if (serviceRequests.contains(unit))
+	return;
+	
+for (ServiceCrew sc:serviceCrews)
+	if (sc.equipmentUnit == unit)
+		return;
+maintenanceRequests.addLast(unit);
+
+for (ServiceCrew sc:serviceCrews)	
+	send("CHECK REQUEST QUEUE",sc);]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
