@@ -115,7 +115,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1723723203388</Id>
 					<Name><![CDATA[equipmentLocations]]></Name>
-					<X>120</X><Y>270</Y>
+					<X>120</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -133,7 +133,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1723727839477</Id>
 					<Name><![CDATA[serviceRequests]]></Name>
-					<X>120</X><Y>240</Y>
+					<X>120</X><Y>170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -148,7 +148,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1723816580639</Id>
 					<Name><![CDATA[maintenanceRequests]]></Name>
-					<X>120</X><Y>300</Y>
+					<X>120</X><Y>230</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -167,7 +167,7 @@
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1723727947902</Id>
 					<Name><![CDATA[requestService]]></Name>
-					<X>120</X><Y>120</Y>
+					<X>120</X><Y>80</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -192,7 +192,7 @@ for (ServiceCrew sc:serviceCrews)
 					<ReturnType><![CDATA[boolean]]></ReturnType>
 					<Id>1723728270543</Id>
 					<Name><![CDATA[thereAreRequests]]></Name>
-					<X>120</X><Y>140</Y>
+					<X>120</X><Y>100</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -204,7 +204,7 @@ for (ServiceCrew sc:serviceCrews)
 					<ReturnType><![CDATA[EquipmentUnit]]></ReturnType>
 					<Id>1723728304375</Id>
 					<Name><![CDATA[getRequest]]></Name>
-					<X>120</X><Y>160</Y>
+					<X>120</X><Y>120</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -219,7 +219,7 @@ else
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1723816989583</Id>
 					<Name><![CDATA[requestMaintenance]]></Name>
-					<X>120</X><Y>180</Y>
+					<X>120</X><Y>140</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -308,6 +308,34 @@ for (ServiceCrew sc:serviceCrews)
 						<Code><![CDATA[equipmentLocations.size()]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<StatisticsItem>
+						<Id>1723820083313</Id>
+						<Name><![CDATA[NWorking]]></Name>
+						<Type>count</Type>
+						<Expression><![CDATA[]]></Expression>
+						<Condition><![CDATA[item.inState(item.Working)]]></Condition>
+					</StatisticsItem>
+					<StatisticsItem>
+						<Id>1723820215724</Id>
+						<Name><![CDATA[NOnService]]></Name>
+						<Type>count</Type>
+						<Expression><![CDATA[]]></Expression>
+						<Condition><![CDATA[item.inState(item.Repair)||item.inState(item.Replacement)]]></Condition>
+					</StatisticsItem>
+					<StatisticsItem>
+						<Id>1723820264641</Id>
+						<Name><![CDATA[NOnMaintenance]]></Name>
+						<Type>count</Type>
+						<Expression><![CDATA[]]></Expression>
+						<Condition><![CDATA[item.inState(item.Maintenance)]]></Condition>
+					</StatisticsItem>
+					<StatisticsItem>
+						<Id>1723820294455</Id>
+						<Name><![CDATA[NFailed]]></Name>
+						<Type>count</Type>
+						<Expression><![CDATA[]]></Expression>
+						<Condition><![CDATA[item.inState(item.Failed)]]></Condition>
+					</StatisticsItem>
 					<InEnvironment>true</InEnvironment>	
 					<InitialLocationType>NODE</InitialLocationType>
 					<XCode Class="CodeValue">
@@ -347,7 +375,7 @@ for (ServiceCrew sc:serviceCrews)
 				<EmbeddedObject>
 					<Id>1723723511233</Id>
 					<Name><![CDATA[serviceCrews]]></Name>
-					<X>120</X><Y>60</Y>
+					<X>120</X><Y>40</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -371,6 +399,27 @@ for (ServiceCrew sc:serviceCrews)
 						<Code><![CDATA[3]]></Code>
 					</Replication>
 					<CollectionType>ARRAY_LIST_BASED</CollectionType>
+					<StatisticsItem>
+						<Id>1723821668852</Id>
+						<Name><![CDATA[NIdle]]></Name>
+						<Type>count</Type>
+						<Expression><![CDATA[]]></Expression>
+						<Condition><![CDATA[item.inState(item.Idle)]]></Condition>
+					</StatisticsItem>
+					<StatisticsItem>
+						<Id>1723821798932</Id>
+						<Name><![CDATA[NDriving]]></Name>
+						<Type>count</Type>
+						<Expression><![CDATA[]]></Expression>
+						<Condition><![CDATA[item.inState(item.DrivingHome)]]></Condition>
+					</StatisticsItem>
+					<StatisticsItem>
+						<Id>1723821817005</Id>
+						<Name><![CDATA[NWorking]]></Name>
+						<Type>count</Type>
+						<Expression><![CDATA[]]></Expression>
+						<Condition><![CDATA[item.inState(item.Working)]]></Condition>
+					</StatisticsItem>
 					<InEnvironment>true</InEnvironment>	
 					<InitialSpeedCode Class="CodeUnitValue">
 						<Code><![CDATA[70]]></Code>
@@ -430,14 +479,14 @@ for (ServiceCrew sc:serviceCrews)
 				<GISMap>
 					<Id>1723722707780</Id>
 					<Name><![CDATA[map]]></Name>
-					<X>260</X><Y>0</Y>
+					<X>340</X><Y>0</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>840</Width>
+					<Width>760</Width>
 					<Height>600</Height>
 					<GISShapes>
 					</GISShapes>
@@ -908,6 +957,168 @@ for (ServiceCrew sc:serviceCrews)
 			</Presentation>
 
 				</GISMap>
+    			<TimeStackChart>
+					<Id>1723820528305</Id>
+					<Name><![CDATA[chart]]></Name>
+					<X>0</X><Y>600</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1723881600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[10]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>1100</Width>
+					<Height>280</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>40</XOffset>
+						<YOffset>20</YOffset>
+						<Width>1040</Width>
+						<Height>200</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>40</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>YEAR</TimeWindowUnits>
+					<TimeWindowExpression><![CDATA[5]]></TimeWindowExpression>
+					<DatasetExpression>
+					<Id>1723820528993</Id>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-6632142</Color>
+					<Expression2><![CDATA[equipmentUnits.NWorking()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+							<Title><![CDATA[Working]]></Title>
+					</DatasetExpression>
+					<DatasetExpression>
+					<Id>1723820570964</Id>
+					<Expression><![CDATA[my_dataset1]]></Expression>
+					<Color>-65536</Color>
+					<Expression2><![CDATA[equipmentUnits.NFailed()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+							<Title><![CDATA[Failed]]></Title>
+					</DatasetExpression>
+					<DatasetExpression>
+					<Id>1723820599403</Id>
+					<Expression><![CDATA[my_dataset2]]></Expression>
+					<Color>-256</Color>
+					<Expression2><![CDATA[equipmentUnits.NOnService()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+							<Title><![CDATA[On Service]]></Title>
+					</DatasetExpression>
+					<DatasetExpression>
+					<Id>1723820707315</Id>
+					<Expression><![CDATA[my_dataset3]]></Expression>
+					<Color>-16711681</Color>
+					<Expression2><![CDATA[equipmentUnits.NOnMaintenance()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+							<Title><![CDATA[On Maintenance]]></Title>
+					</DatasetExpression>
+					<SamplesToKeep>365</SamplesToKeep>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>HUNDRED_PERCENTS</VerScaleType>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimeStackChart>
+    			<TimeStackChart>
+					<Id>1723821847663</Id>
+					<Name><![CDATA[chart1]]></Name>
+					<X>0</X><Y>880</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1723881600000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[10]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>1080</Width>
+					<Height>240</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>1000</Width>
+						<Height>150</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>YEAR</TimeWindowUnits>
+					<TimeWindowExpression><![CDATA[5]]></TimeWindowExpression>
+					<DatasetExpression>
+					<Id>1723821849382</Id>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-4565549</Color>
+					<Expression2><![CDATA[serviceCrews.NIdle()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+							<Title><![CDATA[Idle]]></Title>
+					</DatasetExpression>
+					<DatasetExpression>
+					<Id>1723821902294</Id>
+					<Expression><![CDATA[my_dataset1]]></Expression>
+					<Color>-2354116</Color>
+					<Expression2><![CDATA[serviceCrews.NDriving()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+							<Title><![CDATA[Driving]]></Title>
+					</DatasetExpression>
+					<DatasetExpression>
+					<Id>1723821953584</Id>
+					<Expression><![CDATA[my_dataset2]]></Expression>
+					<Color>-10496</Color>
+					<Expression2><![CDATA[serviceCrews.NWorking()]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+							<Title><![CDATA[Working]]></Title>
+					</DatasetExpression>
+					<SamplesToKeep>365</SamplesToKeep>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>HUNDRED_PERCENTS</VerScaleType>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimeStackChart>
 			</Presentation>
 
 				</Level>
@@ -1277,7 +1488,7 @@ for (ServiceCrew sc:serviceCrews)
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
-						<FillColor/>
+						<FillColor>-256</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -1301,7 +1512,7 @@ for (ServiceCrew sc:serviceCrews)
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties Width="100" Height="30">
-						<FillColor/>
+						<FillColor>-16711936</FillColor>
 					</Properties>
 				</StatechartElement>
 				<StatechartElement Class="Branch" ParentState="ROOT_NODE">
