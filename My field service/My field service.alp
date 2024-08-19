@@ -112,10 +112,142 @@
 			<CurrentLevel>1723722696068</CurrentLevel>
 			<ConnectionsId>1723722696062</ConnectionsId>
 			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1724061539896</Id>
+					<Name><![CDATA[WorkCost]]></Name>
+					<X>-180</X><Y>370</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1724059678445</Id>
+					<Name><![CDATA[DailyRevenuePerUnit]]></Name>
+					<X>-180</X><Y>20</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[400]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1724059678443</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1724059695085</Id>
+					<Name><![CDATA[ReplacementCost]]></Name>
+					<X>-180</X><Y>50</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[10000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1724059695083</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1724059705381</Id>
+					<Name><![CDATA[RepairCost]]></Name>
+					<X>-180</X><Y>80</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[1000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1724059705379</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1724059715710</Id>
+					<Name><![CDATA[MaintenanceCost]]></Name>
+					<X>-180</X><Y>110</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[600]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1724059715708</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1724059727480</Id>
+					<Name><![CDATA[ServiceCrewCostPerDay]]></Name>
+					<X>-180</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[1500]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1724059727478</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 				<Variable Class="CollectionVariable">
 					<Id>1723723203388</Id>
 					<Name><![CDATA[equipmentLocations]]></Name>
-					<X>120</X><Y>200</Y>
+					<X>40</X><Y>210</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -133,7 +265,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1723727839477</Id>
 					<Name><![CDATA[serviceRequests]]></Name>
-					<X>120</X><Y>170</Y>
+					<X>40</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -148,7 +280,7 @@
 				<Variable Class="CollectionVariable">
 					<Id>1723816580639</Id>
 					<Name><![CDATA[maintenanceRequests]]></Name>
-					<X>120</X><Y>230</Y>
+					<X>40</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -161,13 +293,51 @@
 
 				</Variable>
 			</Variables>
+			<Events>
+				<Event>
+					<Id>1724059961873</Id>
+					<Name><![CDATA[onJan1]]></Name>
+					<X>-180</X><Y>170</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_DAY]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1724140800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[day()]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[365*day()]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[statsWorking.reset();
+statsFailed.reset();
+statsOnService.reset();
+statsOnMtce.reset();
+WorkCost = 0;
+]]></Action>
+				</Event>
+			</Events>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>VOID</ReturnModificator>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1723727947902</Id>
 					<Name><![CDATA[requestService]]></Name>
-					<X>120</X><Y>80</Y>
+					<X>40</X><Y>90</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -192,7 +362,7 @@ for (ServiceCrew sc:serviceCrews)
 					<ReturnType><![CDATA[boolean]]></ReturnType>
 					<Id>1723728270543</Id>
 					<Name><![CDATA[thereAreRequests]]></Name>
-					<X>120</X><Y>100</Y>
+					<X>40</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -204,7 +374,7 @@ for (ServiceCrew sc:serviceCrews)
 					<ReturnType><![CDATA[EquipmentUnit]]></ReturnType>
 					<Id>1723728304375</Id>
 					<Name><![CDATA[getRequest]]></Name>
-					<X>120</X><Y>120</Y>
+					<X>40</X><Y>130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -219,7 +389,7 @@ else
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1723816989583</Id>
 					<Name><![CDATA[requestMaintenance]]></Name>
-					<X>120</X><Y>140</Y>
+					<X>40</X><Y>150</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -240,6 +410,96 @@ for (ServiceCrew sc:serviceCrews)
 	send("CHECK REQUEST QUEUE",sc);]]></Body>
 				</Function>
 			</Functions>
+			<AnalysisData>
+    			<Statistics>
+					<Id>1724058364533</Id>
+					<Name><![CDATA[statsOnService]]></Name>
+					<X>-180</X><Y>220</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1724140800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</RecurrenceCode>
+					<Discrete>false</Discrete>
+					<ValueCode><![CDATA[equipmentUnits.NOnService()]]></ValueCode>
+				</Statistics>
+    			<Statistics>
+					<Id>1724058734608</Id>
+					<Name><![CDATA[statsOnMtce]]></Name>
+					<X>-180</X><Y>260</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1724140800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</RecurrenceCode>
+					<Discrete>false</Discrete>
+					<ValueCode><![CDATA[equipmentUnits.NOnMaintenance()]]></ValueCode>
+				</Statistics>
+    			<Statistics>
+					<Id>1724058805473</Id>
+					<Name><![CDATA[statsFailed]]></Name>
+					<X>-180</X><Y>300</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1724140800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</RecurrenceCode>
+					<Discrete>false</Discrete>
+					<ValueCode><![CDATA[equipmentUnits.NFailed()]]></ValueCode>
+				</Statistics>
+    			<Statistics>
+					<Id>1724058834346</Id>
+					<Name><![CDATA[statsWorking]]></Name>
+					<X>-180</X><Y>340</Y>
+					<Label><X>15</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1724140800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
+					</RecurrenceCode>
+					<Discrete>false</Discrete>
+					<ValueCode><![CDATA[equipmentUnits.NWorking()]]></ValueCode>
+				</Statistics>
+			</AnalysisData>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1723722696062</Id>
@@ -266,7 +526,7 @@ for (ServiceCrew sc:serviceCrews)
 				<EmbeddedObject>
 					<Id>1723723463412</Id>
 					<Name><![CDATA[equipmentUnits]]></Name>
-					<X>120</X><Y>20</Y>
+					<X>40</X><Y>30</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -375,7 +635,7 @@ for (ServiceCrew sc:serviceCrews)
 				<EmbeddedObject>
 					<Id>1723723511233</Id>
 					<Name><![CDATA[serviceCrews]]></Name>
-					<X>120</X><Y>40</Y>
+					<X>40</X><Y>50</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -479,7 +739,7 @@ for (ServiceCrew sc:serviceCrews)
 				<GISMap>
 					<Id>1723722707780</Id>
 					<Name><![CDATA[map]]></Name>
-					<X>340</X><Y>0</Y>
+					<X>240</X><Y>0</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -974,19 +1234,19 @@ for (ServiceCrew sc:serviceCrews)
 						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[10]]></Code>
+						<Code><![CDATA[1]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>1100</Width>
-					<Height>280</Height>
+					<Width>1020</Width>
+					<Height>340</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>40</XOffset>
 						<YOffset>20</YOffset>
-						<Width>1040</Width>
-						<Height>200</Height>
+						<Width>960</Width>
+						<Height>260</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -1037,7 +1297,7 @@ for (ServiceCrew sc:serviceCrews)
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[On Maintenance]]></Title>
 					</DatasetExpression>
-					<SamplesToKeep>365</SamplesToKeep>
+					<SamplesToKeep>1825</SamplesToKeep>
 					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
 					<VerScaleType>HUNDRED_PERCENTS</VerScaleType>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
@@ -1045,7 +1305,7 @@ for (ServiceCrew sc:serviceCrews)
     			<TimeStackChart>
 					<Id>1723821847663</Id>
 					<Name><![CDATA[chart1]]></Name>
-					<X>0</X><Y>880</Y>
+					<X>0</X><Y>920</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1059,19 +1319,19 @@ for (ServiceCrew sc:serviceCrews)
 						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</OccurrenceTime>
 					<RecurrenceCode Class="CodeUnitValue">
-						<Code><![CDATA[10]]></Code>
+						<Code><![CDATA[1]]></Code>
 						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>1080</Width>
-					<Height>240</Height>
+					<Width>1020</Width>
+					<Height>280</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>1000</Width>
-						<Height>150</Height>
+						<Width>940</Width>
+						<Height>190</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -1119,6 +1379,93 @@ for (ServiceCrew sc:serviceCrews)
 					<VerScaleType>HUNDRED_PERCENTS</VerScaleType>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimeStackChart>
+    			<TimePlot>
+					<Id>1724060764972</Id>
+					<Name><![CDATA[plot]]></Name>
+					<X>0</X><Y>390</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<AutoUpdate>true</AutoUpdate>
+					<OccurrenceAtTime>true</OccurrenceAtTime>
+					<OccurrenceDate>1724140800000</OccurrenceDate>
+					<OccurrenceTime Class="CodeUnitValue">
+						<Code><![CDATA[0]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+					</OccurrenceTime>
+					<RecurrenceCode Class="CodeUnitValue">
+						<Code><![CDATA[1]]></Code>
+						<Unit Class="TimeUnits"><![CDATA[YEAR]]></Unit>
+					</RecurrenceCode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Width>260</Width>
+					<Height>210</Height>
+					<BackgroundColor/>
+					<BorderColor/>
+					<ChartArea>
+						<XOffset>50</XOffset>
+						<YOffset>30</YOffset>
+						<Width>180</Width>
+						<Height>120</Height>
+						<BackgroundColor>-1</BackgroundColor>
+						<BorderColor>-16777216</BorderColor>
+						<GridColor>-12566464</GridColor>
+					</ChartArea>
+					<Legend>
+						<Place>SOUTH</Place>
+						<TextColor>-16777216</TextColor>
+						<Size>30</Size>
+					</Legend>
+					<Labels>
+						<HorLabelsPosition>DEFAULT</HorLabelsPosition>
+						<VerLabelsPosition>DEFAULT</VerLabelsPosition>
+						<TextColor>-12566464</TextColor>
+					</Labels>
+					<ShowLegend>true</ShowLegend>
+					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
+					<TimeWindowUnits>YEAR</TimeWindowUnits>
+					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
+					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
+					<VerScaleType>AUTO</VerScaleType>
+					<DrawLine>true</DrawLine>
+					<Interpolation>LINEAR</Interpolation>
+					<DatasetExpression>  
+						<Title><![CDATA[Rev]]></Title>
+					<Id>1724060767569</Id>
+					<Expression><![CDATA[my_dataset]]></Expression>
+					<Color>-9807155</Color>
+					<Expression2><![CDATA[statsWorking.mean()*DailyRevenuePerUnit*365/1000.]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Cost]]></Title>
+					<Id>1724061589110</Id>
+					<Expression><![CDATA[my_dataset1]]></Expression>
+					<Color>-2987746</Color>
+					<Expression2><![CDATA[(serviceCrews.size()*ServiceCrewCostPerDay*365+WorkCost)/1000]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[Profit]]></Title>
+					<Id>1724061643691</Id>
+					<Expression><![CDATA[my_dataset2]]></Expression>
+					<Color>-2448096</Color>
+					<Expression2><![CDATA[(statsWorking.mean()*DailyRevenuePerUnit*365 - serviceCrews.size()*ServiceCrewCostPerDay*365 - WorkCost)/1000]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>1.0</LineWidth>
+					</DatasetExpression>
+					<SamplesToKeep>50</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[5]]></TimeWindowExpression>
+					<FillAreaUnderLine>false</FillAreaUnderLine>
+					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
+    			</TimePlot>
 			</Presentation>
 
 				</Level>
@@ -1161,6 +1508,20 @@ for (ServiceCrew sc:serviceCrews)
 					<Longitude>-2.4795680640627085</Longitude>
 				</EmbeddedObjectPresentation>
 			</Presentation>
+			<Areas>
+				<Area>
+					<Id>1724059209107</Id>
+					<Name><![CDATA[viewOutput]]></Name>
+					<X>0</X><Y>600</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<Title><![CDATA[]]></Title>
+					<Width>1020</Width>
+					<Height>600</Height>
+				</Area>
+			</Areas>
 
 		</ActiveObjectClass>
 		<!--   =========   Active Object Class   ========  -->
@@ -1722,6 +2083,8 @@ serviceCrew = null;]]></Action>
 					</Points>
 					<IconOffset>20.0</IconOffset>
 					<Properties Source="1723729353481" Target="1723729485609" Trigger="timeout">
+						<Action><![CDATA[main.WorkCost += main.RepairCost;
+]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[triangular(RepairTime * 0.5, RepairTime, RepairTime * 2.5)]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -1819,6 +2182,7 @@ serviceCrew = null;]]></Action>
 						<Action><![CDATA[send( "FINISHED", serviceCrew );
 serviceCrew = null;
 TimeLastMaintenance = time();
+main.WorkCost += main.MaintenanceCost;
 MaintenanceTimer.restart();]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[triangular(MaintenanceTime * 0.5, MaintenanceTime, MaintenanceTime * 1.5)]]></Code>
@@ -1855,7 +2219,9 @@ MaintenanceTimer.restart();]]></Action>
 serviceCrew = null;
 TimeLastReplacement = time();
 TimeLastMaintenance = time();
-MaintenanceTimer.restart();]]></Action>
+main.WorkCost += main.ReplacementCost;
+MaintenanceTimer.restart();
+]]></Action>
 						<Timeout Class="CodeUnitValue">
 							<Code><![CDATA[triangular(ReplacementTime * 0.5, ReplacementTime, ReplacementTime * 1.5)]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
@@ -2840,6 +3206,21 @@ moveTo(equipmentUnit);]]></Action>
 			</Presentation>
 
 			<Parameters>			
+				<Parameter>
+					<ParameterName><![CDATA[DailyRevenuePerUnit]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[ReplacementCost]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[RepairCost]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[MaintenanceCost]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[ServiceCrewCostPerDay]]></ParameterName>
+				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
