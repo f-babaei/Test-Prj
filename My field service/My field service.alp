@@ -122,6 +122,9 @@
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
 						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
@@ -1374,7 +1377,7 @@ for (ServiceCrew sc:serviceCrews)
 					<Expression2Flag>true</Expression2Flag>
 							<Title><![CDATA[Working]]></Title>
 					</DatasetExpression>
-					<SamplesToKeep>365</SamplesToKeep>
+					<SamplesToKeep>1825</SamplesToKeep>
 					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
 					<VerScaleType>HUNDRED_PERCENTS</VerScaleType>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
@@ -1446,7 +1449,7 @@ for (ServiceCrew sc:serviceCrews)
 					<Id>1724061589110</Id>
 					<Expression><![CDATA[my_dataset1]]></Expression>
 					<Color>-2987746</Color>
-					<Expression2><![CDATA[(serviceCrews.size()*ServiceCrewCostPerDay*365+WorkCost)/1000]]></Expression2>
+					<Expression2><![CDATA[(serviceCrews.size()*ServiceCrewCostPerDay*365 + WorkCost)/1000]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
@@ -1459,7 +1462,7 @@ for (ServiceCrew sc:serviceCrews)
 					<Expression2><![CDATA[(statsWorking.mean()*DailyRevenuePerUnit*365 - serviceCrews.size()*ServiceCrewCostPerDay*365 - WorkCost)/1000]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
-						<LineWidth>1.0</LineWidth>
+						<LineWidth>3.0</LineWidth>
 					</DatasetExpression>
 					<SamplesToKeep>50</SamplesToKeep>
 					<TimeWindowExpression><![CDATA[5]]></TimeWindowExpression>
